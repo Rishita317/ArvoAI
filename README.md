@@ -1,4 +1,4 @@
-# ArvoAI ��
+# ArvoAI 
 
 **NLP-powered CLI autodeployment system**
 
