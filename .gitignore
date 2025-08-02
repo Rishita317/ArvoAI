@@ -1,0 +1,22 @@
+# Terraform files (CRITICAL - these are huge!)
+terraform/
+.terraform/
+*.tfstate*
+*.tfplan
+*.tfvars
+
+# AWS & Credentials
+.env
+.aws/
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Logs
+*.log
+
+# OS
+.DS_Store

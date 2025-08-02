@@ -1,0 +1,57 @@
+# ArvoAI Configuration File
+# Cloud provider settings and deployment configurations
+
+aws:
+  default_region: "us-east-1"
+  instance_types:
+    small: "t2.micro"
+    medium: "t2.small"
+    large: "t2.medium"
+  ami_ids:
+    us-east-1: "ami-0c55b159cbfafe1f0"
+    us-west-2: "ami-0892d3c7ee96c0bf7"
+    eu-west-1: "ami-0d71ea30463e0ff8d"
+
+gcp:
+  default_region: "us-central1"
+  default_zone: "us-central1-a"
+  machine_types:
+    small: "e2-micro"
+    medium: "e2-small"
+    large: "e2-medium"
+  images:
+    debian: "debian-cloud/debian-11"
+    ubuntu: "ubuntu-os-cloud/ubuntu-2004-lts"
+
+deployment:
+  default_strategy: "simple"
+  supported_frameworks:
+    - "flask"
+    - "django"
+    - "fastapi"
+    - "express"
+    - "react"
+    - "vue"
+    - "spring"
+    - "laravel"
+
+  ports:
+    flask: 5000
+    django: 8000
+    fastapi: 8000
+    express: 3000
+    react: 3000
+    vue: 3000
+    spring: 8080
+    laravel: 8000
+
+logging:
+  level: "INFO"
+  file: "arvo_deployment.log"
+  max_size: "10MB"
+  backup_count: 5
+
+terraform:
+  version: "1.0.0"
+  backend: "local"
+  state_file: "terraform.tfstate"
